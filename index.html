@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Varta:wght@400;600&family=Work+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <title>Antic</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header-hero-wrap">
+            <div class="container">
+                <header class="header">
+                    <a href="" class="logo">antic</a>
+                    <nav>
+                        <ul data-modal class="nav-list is-hidden">
+                            <li class="nav-list-item">
+                                <a class="nav-list-link" href="#products">Products</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a class="nav-list-link" href="#rooms">Rooms</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a class="nav-list-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a class="nav-list-link" href="#inspirations">Inspirations</a>
+                            </li>
+                            <li><button class="close-btn" data-modal-close type="button">Close</button></li>
+                        </ul>
+                    </nav>
+                    <button class="menu-btn" data-modal-open type="button"></button>
+                    <a href="" class="nav-button">
+                        <svg class="nav-button-contact" width="50" height="50">
+                            <use href="./img/sprite.svg#contact"></use>
+                        </svg>
+                    </a>
+                </header>
+                <section class="hero-section">
+                    <p class="hero-section-name">home design</p>
+                    <h1 class="hero-section-header">Elegance for Interiors & Exteriors</h1>
+                    <p class="hero-section-text">We provide everyone with modern, trendy, quality furniture</p>
+                    <button class="hero-section-btn" type="button">
+                        <svg class="hero-section-btn-icon" width="50" height="50">
+                            <use href="./img/sprite.svg#scroll-down"></use>
+                        </svg>
+                    </button>
+                </section>
+                <script>(() => {
+                        const refs = {
+                            openModalBtn: document.querySelector("[data-modal-open]"),
+                            closeModalBtn: document.querySelector("[data-modal-close]"),
+                            modal: document.querySelector("[data-modal]"),
+                        };
+
+                        refs.openModalBtn.addEventListener("click", toggleModal);
+                        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+                        function toggleModal() {
+                            refs.modal.classList.toggle("is-hidden");
+                        }
+                    })();</script>
+            </div>
+        </div>
+        <main>
+            <section id="rooms" class="rooms-section">
+                <div class="container">
+                    <h2 class="rooms-header">Find your room</h2>
+                    <div class="list-wrap">
+                        <p class="rooms-text">Dining room, bedroom, bathroom or office. Find what you need</p>
+                        <svg class="scroll-sign">
+                            <use href="./img/sprite.svg#left-right"></use>
+                        </svg>
+                        <ul class="rooms-list">
+                            <li class="rooms-list-item">
+                                <a class="rooms-list-link" href="">
+                                    <img src="./img/bedroom-bg.jpg" alt="Bedroom">
+                                    <h3 class="rooms-list-header">Bedroom</h3>
+                                    <p class="rooms-list-text">New arrivals</p>
+                                </a>
+                            </li>
+                            <li class="rooms-list-item">
+                                <a class="rooms-list-link" href="">
+                                    <img src="./img/living-room-bg.jpg" alt="Living room">
+                                    <h3 class="rooms-list-header living-room">Living room</h3>
+                                    <p class="rooms-list-text">New arrivals</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rooms-bottom-wrap">
+                        <button class="section-link next" type="button">Next</button>
+                        <p class="item-count">01/05</p>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="benefits-section">
+                <div class="container">
+                    <div class="benefits-wrap">
+                        <h2 class="benefits-header">We stay by your <br> side to design <br> your projects</h2>
+                        <button class="section-link" type="button">Find out more</button>
+                    </div>
+                    <ul class="benefits-list">
+                        <li class="benefits-list-item">
+                            <h3 class="benefits-list-header">Our Advices</h3>
+                            <p class="benefits-list-text">What if you took advantage of this rather special period to
+                                rethink your interior? You spend more time at home so you might as well feel good there.
+                            </p>
+                        </li>
+                        <li class="benefits-list-item">
+                            <h3 class="benefits-list-header">Click and Collect</h3>
+                            <p class="benefits-list-text">Adapted and contactless. Free from € 200 of purchases in
+                                stores
+                                offering the service.</p>
+                        </li>
+                        <li class="benefits-list-item">
+                            <h3 class="benefits-list-header">Conception Service</h3>
+                            <p class="benefits-list-text">Personalized service with an expert advisor for your interior
+                                and
+                                exterior decoration or layout projects. </p>
+                        </li>
+                        <li class="benefits-list-item">
+                            <h3 class="benefits-list-header">Installation Service</h3>
+                            <p class="benefits-list-text">Our furniture packaged in flat packs are designed for easy
+                                assembly. But you can call on our partner.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="inspirations" class="inspirations-section">
+                <div class="container">
+                    <div class="subscribe-wrap">
+                        <div class="subscribe-text-wrap">
+                            <h2 class="subscribe-header">Be aware of the latest trends</h2>
+                            <p class="subscribe-text">Stay informed of new trends, but also of our various offers.</p>
+                            <a class="section-link" href="">Learn more</a>
+                        </div>
+                        <form class="subscribe-form">
+                            <label hidden for="email"></label>
+                            <input class="email-input" type="email" id="email" name="email"
+                                placeholder="email@address.com">
+                            <button class="subscribe-btn" type="submit">subscribe</button>
+                        </form>
+                    </div>
+                    <div class="inspirations-wrap">
+                        <div class="inspirations-text-wrap">
+                            <h2 class="inspirations-header">Inspirations</h2>
+                            <p class="inspirations-text">Our experts are keen to stay on top of trends in order to offer
+                                you
+                                new
+                                inspirations for your
+                                interior and exterior every day. Remember that to inspire you we have to inspire
+                                ourselves
+                                and
+                                we want to share that with you.
+                            </p>
+                            <div class="scroll-wrap">
+                                <button class="hero-section-btn" type="button">
+                                    <svg class="hero-section-btn-icon scroll-nav" width="40" height="40">
+                                        <use href="./img/sprite.svg#scroll-down"></use>
+                                    </svg>
+                                </button>
+                                <button class="hero-section-btn" type="button">
+                                    <svg class="hero-section-btn-icon scroll-nav" width="40" height="40">
+                                        <use href="./img/sprite.svg#scroll-down"></use>
+                                    </svg>
+                                </button>
+                                <p class="item-count">01/05</p>
+                            </div>
+                        </div>
+                        <ul id="products" class="products-list">
+                            <li class="products-list-item">
+                                <a href="" class="products-list-link">
+                                    <div class="products-list-wrap">
+                                        <img src="./img/chair.jpg" alt="chair" class="products-list-img">
+                                        <div class="products-list-overlay">
+                                            <h3 class="products-list-header">Chair</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="products-list-item">
+                                <a href="" class="products-list-link">
+                                    <div class="products-list-wrap">
+                                        <img src="./img/kitchen.jpg" alt="Kitchen" class="products-list-img">
+                                        <div class="products-list-overlay">
+                                            <h3 class="products-list-header">Cooked</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="products-list-item">
+                                <a href="" class="products-list-link">
+                                    <div class="products-list-wrap">
+                                        <img src="./img/living-room.jpg" alt="living-room" class="products-list-img">
+                                        <div class="products-list-overlay">
+                                            <h3 class="products-list-header">Living room</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="products-list-item">
+                                <a href="" class="products-list-link">
+                                    <div class="products-list-wrap">
+                                        <img src="./img/tables.jpg" alt="Tables" class="products-list-img">
+                                        <div class="products-list-overlay">
+                                            <h3 class="products-list-header">Tables</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-main">
+                    <a href="" class="logo">antic</a>
+                    <ul class="footer-list">
+                        <li>
+                            <ul class="footer-sublist">
+                                <li class="footer-sublist-head-item">
+                                    <a href="" class="footer-sublist-main-link">About</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Our story</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Our stores</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Our partners</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="footer-sublist">
+                                <li class="footer-sublist-head-item">
+                                    <a href="#services" class="footer-sublist-main-link">Services</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Click and collect</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Conception</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Installation</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Advices</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Gift card</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="footer-sublist">
+                                <li class="footer-sublist-head-item">
+                                    <a href="#rooms" class="footer-sublist-main-link">Rooms</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Living room</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Dining room</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Cooked</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Bedroom</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Bathroom</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Office</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Laundry</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Garage</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="footer-sublist">
+                                <li class="footer-sublist-head-item">
+                                    <a href="#products" class="footer-sublist-main-link">Products</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Furniture</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Decoration</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Storage</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Baby and child</a>
+                                </li>
+                                <li class="footer-sublist-item">
+                                    <a href="" class="footer-sublist-link">Connected home</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="eco-wrap">
+                        <p class="eco-wrap-header">We respect our planet</p>
+                        <img srcset="./img/footer-img-mob.jpg 1000w, ./img/footer-img.jpg 1440w"
+                            sizes="100vw" src="./img/footer-img-mob.jpg" alt="room photo">
+                        <p class="eco-wrap-text">We're taking positive steps to reduce our impact on the planet. For us,
+                            that means retailing
+                            responsibly.
+                        </p>
+                        <a class="section-link" href="">Learn more</a>
+                    </div>
+                </div>
+                <ul class="soc-list">
+                    <li class="soc-list-item">
+                        <a href="" class="soc-list-link">
+                            <svg class="soc-list-icon" width="32" height="32">
+                                <use href="./img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soc-list-item">
+                        <a href="" class="soc-list-link">
+                            <svg class="soc-list-icon" width="32" height="32">
+                                <use href="./img/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soc-list-item">
+                        <a href="" class="soc-list-link">
+                            <svg class="soc-list-icon" width="32" height="32">
+                                <use href="./img/sprite.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soc-list-item">
+                        <a href="" class="soc-list-link">
+                            <svg class="soc-list-icon" width="32" height="32">
+                                <use href="./img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-bottom">
+                    <a class="footer-bottom-link" href="">Privacy policy</a>
+                    <a class="footer-bottom-link" href="">Term of service</a>
+                    <a class="footer-bottom-link" href="">Language</a>
+                    <p>© 2021 Agence Dnd</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
