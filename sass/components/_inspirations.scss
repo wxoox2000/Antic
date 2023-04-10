@@ -1,0 +1,255 @@
+.subscribe {
+  &-wrap {
+    margin-bottom: 64px;
+  }
+
+  &-text-wrap {
+    margin-bottom: 32px;
+    .section-link {
+      justify-content: start;
+    }
+  }
+
+  &-header {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 40px;
+    color: #121212;
+  }
+
+  &-text {
+    @include content-text();
+    @include mainColor(0.9);
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.email-input {
+  background-color: rgba(243, 238, 232, 0.3);
+  border-radius: 1px;
+  border: none;
+  padding: 12px 15px;
+  margin-bottom: 16px;
+  width: 311px;
+  height: 49px;
+  @include content-text();
+  color: $woodcolor;
+
+  &::placeholder {
+    @include content-text();
+    color: $mobile-p-text;
+  }
+}
+
+.subscribe-btn {
+  @extend %section-main-link;
+  @extend %button;
+  width: 290px;
+  height: 50px;
+  border: none;
+  border-radius: 1px;
+  color: $white;
+  background-color: $accent;
+  transition: color $hover, background-color $hover;
+
+  &:hover {
+    color: $accent;
+    background-color: rgba(243, 238, 232, 0.3);
+  }
+
+  &:focus {
+    color: $accent;
+    background-color: rgba(243, 238, 232, 0.3);
+  }
+}
+
+.inspirations {
+  &-header {
+    @extend .subscribe-header;
+    color: $accent;
+    margin-bottom: 20px;
+  }
+
+  &-text {
+    @extend .subscribe-text;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+}
+
+.scroll {
+  &-wrap {
+    display: none;
+    .hero-section-btn {
+      display: inline-block;
+
+      &:nth-of-type(1) {
+        transform: rotate(90deg);
+        margin-right: 11px;
+      }
+
+      &:nth-of-type(2) {
+        transform: rotate(-90deg);
+      }
+    }
+
+    .item-count {
+      margin-top: 20px;
+    }
+  }
+
+  &-nav {
+    stroke: $woodcolor;
+    fill: $woodcolor;
+  }
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &-img {
+    width: 145px;
+    height: 175px;
+    margin-bottom: 15px;
+  }
+
+  &-header {
+    font-family: "Work Sans", sans-serif;
+    @include content-text(15px, 20px, 400);
+    color: #121212;
+  }
+
+  &-link {
+    &:hover {
+      .products-list-header {
+        color: $woodcolor;
+      }
+    }
+
+    &:focus {
+      .products-list-header {
+        color: $woodcolor;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .inspirations-section {
+    @include sect-padding();
+  }
+
+  .subscribe {
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    &-btn {
+      width: 143px;
+      margin-left: 16px;
+    }
+
+    &-form {
+      display: flex;
+    }
+  }
+
+  .inspirations {
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text-wrap {
+      display: flex;
+    }
+
+    &-text {
+      @include mainColor();
+      width: 359px;
+      margin: 0;
+      margin-left: 180px;
+    }
+  }
+
+  .scroll-wrap {
+    display: block;
+    margin-left: auto;
+  }
+
+  .products-list {
+    order: -1;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &-img {
+      width: 458px;
+      height: 550px;
+      display: block;
+      margin: 0;
+    }
+
+    &-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &-link:hover {
+      .products-list-overlay {
+        opacity: 1;
+        transform: scale(100%);
+      }
+    }
+
+    &-link:focus {
+      .products-list-overlay {
+        opacity: 1;
+        transform: scale(100%);
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: scale(50%);
+      transition: opacity 500ms ease, transform 500ms ease;
+      background-color: rgba(243, 238, 232, 0.7);
+    }
+
+    &-header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 400;
+      font-size: 55px;
+      line-height: 60px;
+      color: $woodcolor;
+    }
+
+    &-item:nth-of-type(3) {
+      .products-list-header {
+        left: 56%;
+      }
+    }
+  }
+}

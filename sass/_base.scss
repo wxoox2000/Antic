@@ -1,0 +1,79 @@
+body {
+  font-family: "Varta", sans-serif;
+  font-style: normal;
+  background-color: $white;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  letter-spacing: -0.3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  display: block;
+}
+
+button {
+  padding: 0;
+  display: block;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 311px;
+}
+
+section,
+footer {
+  padding: 48px 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 1440px;
+  }
+
+  .container {
+    width: 1140px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

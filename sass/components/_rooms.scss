@@ -1,0 +1,218 @@
+.rooms {
+  &-header {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 40px;
+    color: $accent;
+    margin-bottom: 20px;
+  }
+  &-text {
+    @include content-text();
+    @include mainColor(0.9);
+    margin-bottom: 33px;
+  }
+  &-section {
+    background-color: $fillcolor;
+  }
+}
+
+.list-wrap {
+  position: relative;
+}
+
+.rooms-list {
+  position: relative;
+  height: 233px;
+  overflow-x: auto;
+  margin-bottom: 33px;
+  &-item {
+    position: absolute;
+    width: 311px;
+    &:nth-child(2) {
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+  &-link {
+    width: 100%;
+    img {
+      display: block;
+      width: 155px;
+      height: 232px;
+    }
+  }
+
+  &-header {
+    @extend .rooms-header;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $woodcolor;
+    margin-bottom: 0;
+  }
+
+  &-text {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    color: $mobile-p-text;
+  }
+}
+
+.living-room {
+  left: 60%;
+}
+
+.scroll-sign {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  fill: $woodcolor;
+  animation-name: blink;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.rooms-bottom-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next {
+  font-size: 20px;
+}
+
+.section-link {
+  @extend %button;
+  @extend %section-main-link;
+  color: $woodcolor;
+  transition: color $hover;
+  &::after {
+    content: "";
+    background-image: url(../../img/Right.svg);
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    color: $accent;
+  }
+
+  &:focus {
+    color: $accent;
+  }
+}
+
+.item-count {
+  @include content-text();
+  @include mainColor(0.45);
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .rooms {
+    &-header {
+      @include mainColor();
+      font-size: 55px;
+      line-height: 60px;
+      letter-spacing: -0.6px;
+      margin-bottom: 48px;
+    }
+    &-text {
+      @include content-text();
+      @include mainColor(0.9);
+      margin-bottom: 0;
+    }
+    &-section {
+      @include sect-padding($top: 64px);
+    }
+  }
+
+  .list-wrap {
+    display: flex;
+  }
+
+  .rooms-text {
+    width: 189px;
+    flex-grow: 1;
+  }
+
+  .rooms-list {
+    position: static;
+    height: 350px;
+    margin-bottom: 48px;
+    width: 100%;
+    margin-left: 24px;
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      position: relative;
+      flex-basis: 458px;
+      &:nth-child(2) {
+        right: 0;
+        transform: none;
+      }
+    }
+
+    &-header {
+      @extend .rooms-header;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(100%);
+      transition: transform $hover;
+      color: $woodcolor;
+      margin-bottom: 0;
+    }
+
+    &-link {
+      img {
+        display: block;
+        width: 261px;
+        height: 350px;
+      }
+      &:hover {
+        .rooms-list-header {
+          transform: translate(-50%, -50%) scale(110%);
+        }
+      }
+
+      &:focus {
+        .rooms-list-header {
+          transform: translate(-50%, -50%) scale(110%);
+        }
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: 0;
+      right: 85px;
+      color: $mobile-p-text;
+    }
+  }
+  .living-room {
+    left: 58%;
+  }
+
+  .scroll-sign {
+    display: none;
+  }
+
+  .rooms-bottom-wrap {
+    justify-content: start;
+    align-items: center;
+  }
+
+  .item-count {
+    margin-left: 0;
+    order: -1;
+    margin-right: 145px;
+  }
+}

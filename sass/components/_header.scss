@@ -1,0 +1,220 @@
+.header-hero-wrap {
+  position: relative;
+  padding: 41px 32px 178px;
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $fillcolor;
+  background-image: url(../../img/hero-bg-mobile.jpg);
+  background-repeat: no-repeat;
+}
+
+.logo {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 0.74;
+  letter-spacing: 2px;
+  color: $white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 92px;
+}
+
+.nav-button {
+  position: absolute;
+  margin-left: auto;
+  &-contact {
+    display: none;
+  }
+}
+
+.nav-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 41px;
+  padding-left: 20px;
+
+  transform: scaleX(100%);
+  transform-origin: right;
+  opacity: 1;
+  background-color: $fillcolor;
+  transition: transform 250ms ease, opacity 250ms ease;
+  &-link {
+    @include content-text();
+    @include mainColor();
+    display: block;
+    transition: color $hover;
+
+    &:hover {
+      color:  $woodcolor;
+    }
+
+    &:focus {
+      color:  $woodcolor;
+    }
+  }
+  &-item {
+    margin-bottom: 20px;
+  }
+  &-item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transform: scaleX(10%);
+  transition: transform $hover, opacity $hover;
+}
+
+.menu-btn {
+  // position: absolute;
+  // right: 32px;
+  margin-left: auto;
+  @extend %button;
+  width: 24px;
+  height: 12px;
+  background-image: url(../../img/menu.png);
+  background-color: transparent;
+}
+
+.close-btn {
+  @extend %button;
+  width: 40px;
+  height: 40px;
+  // color: $woodcolor;
+  background-color: $fillcolor;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 0;
+  color: $white;
+  &-name {
+    @include content-text(14px, 20px, 700);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  &-header {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+  &-text {
+    @include content-text();
+    color: #f7f8f9;
+    margin-bottom: 24px;
+  }
+  &-btn {
+    @extend %button;
+    margin: 0 auto;
+    background-color: transparent;
+    &-icon {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header-hero-wrap {
+    width: 1440px;
+    padding: 55px 0 215px 150px;
+    background-image: url(../../img/hero-bg-desktop.jpg);
+    background-repeat: no-repeat;
+    // background-size: 720px, contain;
+    background-position-x: right;
+    .container {
+      margin-left: 0;
+    }
+  }
+  .logo {
+    color: $woodcolor;
+    margin-right: 32px;
+  }
+  .header {
+    position: relative;
+    margin-bottom: 110px;
+    justify-content: start;
+    padding: 10px 0;
+    nav {
+      padding-top: 7px;
+    }
+  }
+
+  .nav-button {
+    position: absolute;
+    right: 0;
+    transform: translateX(170%);
+    &-contact {
+      display: block;
+      fill: $white;
+      transition: fill $hover;
+      &:hover,:focus {
+        fill: rgba(255, 255, 255, .7);
+      }
+    }
+  }
+
+  .nav-list {
+    position: static;
+    display: flex;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    &-item {
+      margin-bottom: 0;
+    }
+    .close-btn {
+      display: none;
+    }
+  }
+
+  .is-hidden {
+    visibility: visible;
+    pointer-events: all;
+    transform: none;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+
+  .hero-section {
+    width: 420px;
+    color: $woodcolor;
+    text-align: left;
+    &-name {
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+    &-header {
+      margin-bottom: 30px;
+      font-size: 50px;
+      line-height: 70px;
+    }
+    &-text {
+      @include mainColor(0.9);
+      @include content-text(22px, 31px, 300);
+      margin-bottom: 48px;
+    }
+    &-btn {
+      margin: 0;
+      &-icon {
+        fill: $woodcolor;
+        stroke: $woodcolor;
+      }
+    }
+  }
+}

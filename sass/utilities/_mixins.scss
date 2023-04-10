@@ -1,0 +1,15 @@
+@mixin mainColor($alpha: 1) {
+  color: rgba(112, 100, 88, $alpha);
+  // ~~ #706458
+}
+
+@mixin content-text($size: 18px, $lh: 25px, $fw: 400) {
+  font-weight: $fw;
+  font-size: $size;
+  line-height: calc($lh / $size);
+}
+
+@mixin sect-padding($top: 70px, $bottom: 70px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
