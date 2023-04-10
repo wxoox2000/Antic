@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $fillcolor;
-  background-image: url(../../img/hero-bg-mobile.jpg);
+  background-image: url(.././img/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
 }
 
@@ -84,7 +84,7 @@
   @extend %button;
   width: 24px;
   height: 12px;
-  background-image: url(../../img/menu.png);
+  background-image: url(.././img/menu.png);
   background-color: transparent;
 }
 
@@ -131,7 +131,7 @@
   .header-hero-wrap {
     width: 1440px;
     padding: 55px 0 215px 150px;
-    background-image: url(../../img/hero-bg-desktop.jpg);
+    background-image: url(.././img/hero-bg-desktop.jpg);
     background-repeat: no-repeat;
     // background-size: 720px, contain;
     background-position-x: right;

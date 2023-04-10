@@ -114,7 +114,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   background-color: #F3EEE8;
-  background-image: url(../../img/hero-bg-mobile.jpg);
+  background-image: url(.././img/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
 }
 
@@ -204,7 +204,7 @@ footer {
   margin-left: auto;
   width: 24px;
   height: 12px;
-  background-image: url(../../img/menu.png);
+  background-image: url(.././img/menu.png);
   background-color: transparent;
 }
 
@@ -252,7 +252,7 @@ footer {
   .header-hero-wrap {
     width: 1440px;
     padding: 55px 0 215px 150px;
-    background-image: url(../../img/hero-bg-desktop.jpg);
+    background-image: url(.././img/hero-bg-desktop.jpg);
     background-repeat: no-repeat;
     background-position-x: right;
   }
@@ -449,7 +449,7 @@ footer {
 }
 .section-link::after {
   content: "";
-  background-image: url(../../img/Right.svg);
+  background-image: url(.././img/Right.svg);
   width: 20px;
   height: 20px;
 }

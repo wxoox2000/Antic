@@ -96,7 +96,7 @@
   transition: color $hover;
   &::after {
     content: "";
-    background-image: url(../../img/Right.svg);
+    background-image: url(.././img/Right.svg);
     width: 20px;
     height: 20px;
   }
